@@ -29,6 +29,7 @@ h1{
     width: 100%;
     background: rgba(0, 0, 0, 0.322);
     border-radius: 30px;
+    margin-bottom: 10vh;
     flex-direction: column;
 }
 .inventory, .cartBox{
@@ -84,10 +85,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
-    padding: 10px;
 }
 @media screen and (max-width: 900px){
     .container{

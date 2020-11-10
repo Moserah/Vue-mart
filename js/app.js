@@ -25,7 +25,7 @@ Vue.component('inventory',{
         return{
             itemInput: '',
             inventory: [
-                'Medium Sized Cup'
+                
             ]
         }
     },

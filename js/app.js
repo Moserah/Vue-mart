@@ -32,7 +32,7 @@ Vue.component('inventory',{
             ],
             styleObject: {
                 position: 'absolute',
-                top: '5px',
+                top: '10px',
                 right: '10px',
                 cursor: 'pointer'
             }

@@ -10,7 +10,7 @@ Vue.component('inventory',{
                 <div class="cartBox">
                     <h1>Enter Your Items</h1>
                     <div class="InputBox">
-                        <input type="text" v-model="itemInput" @.enter="saveItem">
+                        <input type="text" v-model="itemInput" @keyup.enter="saveItem">
                         <button @click="saveItem">Save</button>
                         <button @click="clearItem" clearcart>Clear</button>
                     </div>
@@ -32,7 +32,7 @@ Vue.component('inventory',{
     methods:{
         saveItem() {
             this.inventory.push(this.itemInput),
-                this.itemInput = ""
+            this.itemInput = ""
         },
         clearItem() {
             this.itemInput = "",
@@ -42,6 +42,5 @@ Vue.component('inventory',{
 })
 
 const app = new Vue ({
-    el: '.container',
-    
+    el: '.container',    
 })

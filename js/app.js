@@ -1,7 +1,7 @@
 Vue.component('inventory',{
     template: `
         <div>
-            <h1>SHOP Ex</h1>
+            <h1>Shopping List</h1>
             <div class="cart">
                 <div class="inventory">
                     <h1>Inventory</h1>
@@ -9,9 +9,12 @@ Vue.component('inventory',{
                 </div>
                 <div class="cartBox">
                     <h1>Enter Your Items</h1>
-                    <div class="InputBox">
+                    <div class="InputBox">      
+                    <div class="input">              
                         <input type="text" v-model="itemInput" @keyup.enter="saveItem">
-                        <button @click="saveItem">Save</button>
+                        <span :style="styleObject" @click="clearInput" v-if="itemInput.length > 4">&times;</span>
+                    </div>
+                        <button @click="saveItem" v-if="itemInput.length > 4">Save</button>
                         <button @click="clearItem" clearcart>Clear</button>
                     </div>
                 </div>
@@ -26,7 +29,13 @@ Vue.component('inventory',{
             itemInput: '',
             inventory: [
                 
-            ]
+            ],
+            styleObject: {
+                position: 'absolute',
+                top: '5px',
+                right: '10px',
+                cursor: 'pointer'
+            }
         }
     },
     methods:{
@@ -35,8 +44,10 @@ Vue.component('inventory',{
             this.itemInput = ""
         },
         clearItem() {
-            this.itemInput = "",
             this.inventory = []
+        },
+        clearInput(){
+            this.itemInput = ""
         }
     }
 })

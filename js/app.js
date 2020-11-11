@@ -1,7 +1,7 @@
 Vue.component('inventory',{
     template: `
         <div>
-            <h1>VUE Mart</h1>
+            <h1>SHOP Ex</h1>
             <div class="cart">
                 <div class="inventory">
                     <h1>Inventory</h1>
